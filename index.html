@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Reverse in Place w/Palindrome Detector</title>
+
+  </head>
+
+  <body>
+
+    <h1>Reverse in Place w/Palindrome Detector</h1>
+    <h3>Your result should appear in the div below:</h3>
+    <input id="newWord" type="text">
+    <input type="submit" value="Check" onclick="palindrome()">
+    <div id="result"></div>
+
+    <!-- Script -->
+
+<script type="text/javascript">
+     function palindrome(){
+         revString = "";
+         inpString =document.getElementById("newWord").value;
+         i = inpString.length;
+
+         for (var j = i; j>=0; j--){
+             revString = revString + inpString.charAt(j);
+         }
+         if(inpString === revString){
+             document.getElementById("result").textContent = (inpString + " " + " Is a palindrome! ")
+              
+            }else {
+                document.getElementById("result").textContent = (inpString + " " + " Is NOT a palindrome! ")
+
+            }
+     }
+ 
+
+</script>
+  </body>
+
+</html>
